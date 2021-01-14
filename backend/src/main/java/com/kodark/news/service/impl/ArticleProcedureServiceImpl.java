@@ -15,39 +15,18 @@ public class ArticleProcedureServiceImpl implements ArticleProcedureService {
 	@Autowired
 	private ArticleProcedureDao articleProcedureDao;
 
-	public void execuArticleProcedure(Map<String, Object> params) {
-		articleProcedureDao.execuArticleProcedure(params);
+	@Override
+	public List<Map<String, Object>> execuArticleProcedure(Map<String, Object> params) {
+		return articleProcedureDao.excuArticleProcedure(params);
 	}
 	
-	@Override
-	public List<Map<String, Object>> execuArticleProcedure_2(Map<String, Object> params) {
-		return articleProcedureDao.execuArticleProcedure_2(params);
-	} 
-
 	@Override
 	public List<Map<String, Object>> execuLatestProcedure(Map<String, Object> params) {
 		return articleProcedureDao.latestProcedure(params);
 	}
-
-	@Override
-	public List<Map<String, Object>> execuCommentProcedure(int i) {
-
-		return articleProcedureDao.commentProcedure(i);
-	}
-
-	@Override
+	
 	public List<Map<String, Object>> getArticleDetail(Map<String, Object> params) {
 		return articleProcedureDao.getArticleDetail(params);
-	}
-
-	@Override
-	public List<Map<String, Object>> getEmotionInfo(int params) {
-		return articleProcedureDao.getEmotionInfo(params);
-	}
-
-	@Override
-	public List<Map<String, Object>> getCommentReply(int articleId, int commentId) {
-		return articleProcedureDao.getCommentReply(articleId, commentId);
 	}
 
 }

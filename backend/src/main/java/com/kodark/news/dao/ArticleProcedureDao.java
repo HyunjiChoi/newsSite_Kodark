@@ -14,32 +14,16 @@ public class ArticleProcedureDao {
 	@Autowired
 	ArticleProcedureMapper articleProcedureMapper;
 
-	public void execuArticleProcedure(Map<String, Object> params) {
-		articleProcedureMapper.articleProcedure(params);
+	public List<Map<String, Object>> excuArticleProcedure(Map<String, Object> params) {
+		return articleProcedureMapper.articleProcedure(params);
 	}
-
+	
 	public List<Map<String, Object>> getArticleDetail(Map<String, Object> params) {
 		return articleProcedureMapper.getArticleDetail(params);
 	}
 
-	public List<Map<String, Object>> getEmotionInfo(int _articleId) {
-		return articleProcedureMapper.getEmotionInfo(_articleId);
-	}
-
-	public List<Map<String, Object>> getCommentReply(int _articleId, int _commentId) {
-		return articleProcedureMapper.getCommentReply(_articleId, _commentId);
-	}
-
-	public List<Map<String, Object>> execuArticleProcedure_2(Map<String, Object> params) {
-		return articleProcedureMapper.articleProcedure_2(params);
-	}
-
 	public List<Map<String, Object>> latestProcedure(Map<String, Object> params) {
 		return articleProcedureMapper.latestProcedure(params);
-	}
-
-	public List<Map<String, Object>> commentProcedure(int i) {
-		return articleProcedureMapper.commentProcedure(i);
 	}
 
 }
