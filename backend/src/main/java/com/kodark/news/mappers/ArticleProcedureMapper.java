@@ -26,7 +26,12 @@ public interface ArticleProcedureMapper {
 			+ ",#{_article_id, mode=IN, jdbcType=INTEGER, javaType=java.lang.Integer }"
 			+ ",#{_reporter_id, mode=IN, jdbcType=INTEGER, javaType=java.lang.Integer }"
 			+ ",#{_category, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String }"
+<<<<<<< HEAD
 			+ ",#{_commentId, mode=IN, jdbcType=INTEGER, javaType=java.lang.Integer }"
+=======
+			+ ",#{_commentId, mode=INOUT, jdbcType=INTEGER, javaType=java.lang.Integer }"
+			+ ",#{_id, mode=INOUT, jdbcType=INTEGER, javaType=java.lang.Integer }"
+>>>>>>> 45608c25efe79ad83783d2de1f8e2dff227916d8
 			+ ",#{_title, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}"
 			+ ",#{_subTitle, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}"
 			+ ",#{_content, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}"
