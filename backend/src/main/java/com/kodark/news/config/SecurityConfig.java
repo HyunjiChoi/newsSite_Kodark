@@ -18,9 +18,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
 		        .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 		
-        		.csrf().disable()
-        		.formLogin().disable()
-                .httpBasic();
+        		//.csrf().disable()
+        		//.formLogin().disable()
+                //.httpBasic();
     }
 
 	private AbstractHttpConfigurer<CsrfConfigurer<HttpSecurity>, HttpSecurity> csrf() {
